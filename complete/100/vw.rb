@@ -3,6 +3,7 @@
 s = gets.to_s
 total = 0
 s = s.chomp.chars
+
 s.each do |i|
   if i == "v"
     total += 1
