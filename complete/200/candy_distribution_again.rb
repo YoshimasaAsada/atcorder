@@ -3,21 +3,18 @@ n, x = gets.strip.split(" ").map(&:to_i)
 a = gets.strip.split(" ").map(&:to_i)
 count = 0
 a = a.sort { |b, c| b.to_i <=> c.to_i}
+flag = true
 
-n.times do |i|
-  if x - a[i] > 0
-    x = x - a[i]
+while flag == true
+  if n > count && x >= a[count]
+    x = x - a[count]
     count += 1
-  elsif x - a[i] == 0
-    count += 1
-    p count
-    return
   else
-    if count != 0
-      count -= 1
-    end
-    p count
-    return
+    flag = false
+  end
+  if count == n && x != 0
+    count = count - 1
   end
 end
 
+print(count)
