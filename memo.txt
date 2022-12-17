@@ -30,3 +30,11 @@ chompよりstrip
 
 平方
 a ** 0.5
+
+arr = Array.new(26, false)
+
+.ord
+文字コードを変える
+
+.chr
+数字を文字コードに変換
